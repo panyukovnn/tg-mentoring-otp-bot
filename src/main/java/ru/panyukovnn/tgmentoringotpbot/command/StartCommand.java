@@ -12,8 +12,6 @@ import org.telegram.telegrambots.meta.bots.AbsSender;
 @Service
 public class StartCommand extends BotCommand {
 
-    public static final String GREETING_MESSAGE = "Hello, friend!";
-
     public StartCommand() {
         super("start", "Start command");
     }
@@ -23,7 +21,7 @@ public class StartCommand extends BotCommand {
         try {
             absSender.execute(SendMessage.builder()
                     .chatId(chat.getId())
-                    .text(GREETING_MESSAGE)
+                    .text("Привет, твой идентификатор в телеграм: " + chat.getId())
                     .build());
         } catch (Exception e) {
             log.error("Exception at start command {}: {}", chat.getId(), e.getMessage(), e);

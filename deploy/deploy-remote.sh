@@ -1,1 +1,1 @@
-ssh mbots "cd tg-mentoring-otp-bot/deploy; sh deploy.sh"
+ssh tabots "cd tg-mentoring-otp-bot/deploy; sh deploy.sh"
